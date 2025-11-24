@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safar_buddy/ui/home.dart';
+import 'package:safar_buddy/ui/travel_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,7 +37,11 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Poppins',
       ),
-      home: const HomePage(),
+      home: Scaffold(
+        body: SafeArea(
+          child: const TravelPage(),
+        ),
+      ),
     );
   }
 }
