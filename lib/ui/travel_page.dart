@@ -11,6 +11,7 @@ class TravelPage extends StatefulWidget {
 
 class _TravelPageState extends State<TravelPage> {
 
+  // ignore: prefer_final_fields
   int _selectedIndex = 0;
 
 
