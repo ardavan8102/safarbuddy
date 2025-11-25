@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:safar_buddy/ui/travel_page.dart';
+import 'package:safar_buddy/ui/splash.dart';
 
 void main() {
   runApp(const MyApp());
@@ -37,11 +37,7 @@ class MyApp extends StatelessWidget {
         ),
         fontFamily: 'Poppins',
       ),
-      home: Scaffold(
-        body: SafeArea(
-          child: const TravelPage(),
-        ),
-      ),
+      home: const SplashScreen(),
     );
   }
 }
