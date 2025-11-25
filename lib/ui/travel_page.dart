@@ -13,6 +13,7 @@ class _TravelPageState extends State<TravelPage> {
 
   // ignore: prefer_final_fields
   int _selectedIndex = 0;
+  double imageSize = 55;
 
 
   @override
@@ -27,26 +28,12 @@ class _TravelPageState extends State<TravelPage> {
           Container(
             color: Colors.red,
             width: double.infinity,
-            height: size.height / 2,
+            height: size.height / 2.2,
             child: Stack(
               children: [
 
-                Container(
-                  width: double.infinity,
-                  height: size.height / 2.2,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      image: AssetImage(
-                        travelList[_selectedIndex].image!,
-                      ),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(50),
-                      bottomRight: Radius.circular(50)
-                    ),
-                  ),
-                ),
+                // Location Big Image
+                mainBigImageContainer(size),
 
                 // Appbar Icons
                 Positioned(
@@ -58,6 +45,24 @@ class _TravelPageState extends State<TravelPage> {
                     child: appBarIcons(),
                   ),
                 ),
+
+                // Image List View
+                Positioned(
+                  top: 80,
+                  right: 0,
+                  child: SizedBox(
+                    width: 100,
+                    height: (size.height / 2.2) - 95,
+                    child: ListView.builder(
+                      itemCount: travelList.length,
+                      itemBuilder: (context, index) {
+                        return imageItem(index);
+                      },
+                    ),
+                  ),
+                ),
+
+                //
               ],
             ),
           ),
@@ -70,6 +75,89 @@ class _TravelPageState extends State<TravelPage> {
           ),
       
         ],
+      ),
+    );
+  }
+
+  // Image Item
+  Widget imageItem(int index) {
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: InkWell(
+            // Change Index on-click
+            onTap: () {
+              setState(() {
+                _selectedIndex = index;
+              });
+            },
+            // Animated Card Box for image
+            child: animatedListCardBox(index),
+          ),
+        ),
+      ],
+    );
+  }
+
+  // Image Item Animated Box
+  AnimatedContainer animatedListCardBox(int index) {
+    return AnimatedContainer(
+      width: _selectedIndex == index ? imageSize + 20 : imageSize,
+      height: _selectedIndex == index ? imageSize + 20 : imageSize,
+      decoration: BoxDecoration(
+        border: Border.all(
+          width: 3,
+          color: _selectedIndex == index 
+            ? const Color.fromARGB(255, 234, 227, 255) 
+            : Colors.white
+        ),
+        borderRadius: _selectedIndex == index 
+          ? BorderRadius.circular(18) 
+          : BorderRadius.circular(14),
+        image: DecorationImage(
+          image: AssetImage(travelList[index].image!),
+          fit: BoxFit.cover
+        ),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(
+              0, // X
+              5 // Y
+            ),
+            color: _selectedIndex == index 
+              ? Colors.black.withValues(alpha: 0.2) 
+              : Colors.transparent,
+            spreadRadius: 2,
+            blurRadius: 10,
+          ),
+        ],
+      ),
+      duration: Duration(milliseconds: 250),
+    );
+  }
+
+  // Main Big Image
+  Positioned mainBigImageContainer(Size size) {
+    return Positioned(
+      top: 0,
+      right: 0,
+      left: 0,
+      child: Container(
+        width: double.infinity,
+        height: size.height / 2.6,
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage(
+              travelList[_selectedIndex].image!,
+            ),
+            fit: BoxFit.cover,
+          ),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(50),
+            bottomRight: Radius.circular(50)
+          ),
+        ),
       ),
     );
   }

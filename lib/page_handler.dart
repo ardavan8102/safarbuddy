@@ -29,13 +29,13 @@ class _PageHandlerState extends State<PageHandler> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: _pages[_selectedIndex],
-        bottomNavigationBar: CustomBottomNavBar(
-          onTap: _onItemTapped,
-          currentIndex: _selectedIndex,
-        ),
+    return Scaffold(
+      body: SafeArea(
+        child: _pages[_selectedIndex],
+      ),
+      bottomNavigationBar: CustomBottomNavBar(
+        onTap: _onItemTapped,
+        currentIndex: _selectedIndex,
       ),
     );
   }
