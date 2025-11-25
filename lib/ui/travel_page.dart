@@ -26,14 +26,17 @@ class _TravelPageState extends State<TravelPage> {
         children: [
           // Top side
           Container(
-            color: Colors.red,
+            color: Colors.white,
             width: double.infinity,
             height: size.height / 2.2,
             child: Stack(
               children: [
 
-                // Location Big Image
+                // Background Big Image
                 mainBigImageContainer(size),
+
+                // Dark Overlay For Big Image
+                darkOverlayBackgroundImage(size),
 
                 // Appbar Icons
                 Positioned(
@@ -62,7 +65,12 @@ class _TravelPageState extends State<TravelPage> {
                   ),
                 ),
 
-                //
+                // Name & Location
+                Positioned(
+                  bottom: size.height / 9,
+                  left: size.width / 9,
+                  child: nameAndLocationText(),
+                ),
               ],
             ),
           ),
@@ -76,6 +84,68 @@ class _TravelPageState extends State<TravelPage> {
       
         ],
       ),
+    );
+  }
+
+
+  // Dark Overlay For Big Background Image
+  Positioned darkOverlayBackgroundImage(Size size) {
+    return Positioned(
+      top: 0,
+      right: 0,
+      left: 0,
+      child: Container(
+        width: double.infinity,
+        height: size.height / 2.6,
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            colors: [
+              Colors.transparent,
+              Colors.black.withValues(alpha: 0.8),
+            ],
+            begin: .topCenter,
+            end: .bottomCenter,
+          ),
+          borderRadius: BorderRadius.only(
+            bottomLeft: Radius.circular(50),
+            bottomRight: Radius.circular(50)
+          ),
+        ),
+      ),
+    );
+  }
+
+  // Name & Location Text
+  Column nameAndLocationText() {
+    return Column(
+      spacing: 6,
+      crossAxisAlignment: .start,
+      children: [
+        Text(
+          travelList[_selectedIndex].name!,
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        Row(
+          children: [
+            Icon(
+              CupertinoIcons.placemark_fill,
+              color: Colors.white.withValues(alpha: 0.5),
+            ),
+            Text(
+              travelList[_selectedIndex].location!,
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 16,
+                fontWeight: FontWeight.normal,
+              ),
+            ),
+          ],
+        ),
+      ],
     );
   }
 
@@ -137,7 +207,7 @@ class _TravelPageState extends State<TravelPage> {
     );
   }
 
-  // Main Big Image
+  // Main Big Image For Top Background
   Positioned mainBigImageContainer(Size size) {
     return Positioned(
       top: 0,
