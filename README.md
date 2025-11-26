@@ -37,7 +37,7 @@ Clone the project
 ```Note: project is based on flutter 3.38```
 
 ```bash
-  git clone https://github.com/ardavan8102/Arzin.git
+  git clone https://github.com/ardavan8102/safarbuddy.git
 ```
 
 Go to the project directory
