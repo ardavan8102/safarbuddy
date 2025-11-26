@@ -36,10 +36,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
         showUnselectedLabels: true,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.house),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(CupertinoIcons.location),
             label: 'Locations',
           ),

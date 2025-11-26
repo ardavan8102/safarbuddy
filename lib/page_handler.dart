@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:safar_buddy/components/bottom_nav.dart';
-import 'package:safar_buddy/ui/home.dart';
 import 'package:safar_buddy/ui/search.dart';
 import 'package:safar_buddy/ui/travel_page.dart';
 
@@ -16,7 +15,6 @@ class _PageHandlerState extends State<PageHandler> {
 
   // لیست صفحات
   final List<Widget> _pages = [
-    HomePage(),
     TravelPage(),
     SearchPage(),
   ];
