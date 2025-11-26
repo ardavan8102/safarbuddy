@@ -16,10 +16,10 @@ An Application for traveling and finding Travel Destinations.
 ## 📸 Ui Screenshots
 
 >Destinations Page
-![Travel](https://github.com/ardavan8102/Arzin/blob/master/assets/screenshots/splash.jpg?raw=true)
+![Travel](https://github.com/ardavan8102/safarbuddy/blob/main/assets/screenshots/travel.jpg?raw=true)
 
 >Search Page
-![Search](https://github.com/ardavan8102/Arzin/blob/master/assets/screenshots/splash.jpg?raw=true)
+![Search](https://github.com/ardavan8102/safarbuddy/blob/main/assets/screenshots/search.jpg?raw=true)
 
 
 ## 🔰 Know More Details
