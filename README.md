@@ -13,6 +13,15 @@ An Application for traveling and finding Travel Destinations.
 - [Ardavan Eskandari](https://ardavaneskandari.ir)
 
 
+## 📸 Ui Screenshots
+
+>Destinations Page
+![Travel](https://github.com/ardavan8102/Arzin/blob/master/assets/screenshots/splash.jpg?raw=true)
+
+>Search Page
+![Search](https://github.com/ardavan8102/Arzin/blob/master/assets/screenshots/splash.jpg?raw=true)
+
+
 ## 🔰 Know More Details
 
 Technologies We Used:
@@ -32,12 +41,12 @@ Technologies We Used:
 
 
 ## 🖥️ Run Locally
-
-Clone the project
 ```Note: project is based on flutter 3.38```
 
+Clone the project
+
 ```bash
-  git clone https://github.com/ardavan8102/Arzin.git
+  git clone https://github.com/ardavan8102/safarbuddy.git
 ```
 
 Go to the project directory
