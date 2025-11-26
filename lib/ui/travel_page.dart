@@ -2,7 +2,7 @@ import 'package:expandable_text/expandable_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:safar_buddy/components/icon_button.dart';
-import 'package:safar_buddy/models/travel_model.dart';
+import 'package:safar_buddy/modules/db.dart';
 
 class TravelPage extends StatefulWidget {
   const TravelPage({super.key});
@@ -418,7 +418,7 @@ class _TravelPageState extends State<TravelPage> {
             ),
             borderRadius: BorderRadius.circular(100),
           ),
-          child: const Icon(
+          child: Icon(
             CupertinoIcons.arrow_left,
             color: Colors.white,
           ),

@@ -39,6 +39,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
           opacity: _opacity,
           duration: Duration(seconds: 3),
           child: Column(
+            spacing: 8,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
 
@@ -57,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
                 style: TextStyle(
                   fontSize: 16,
                   fontWeight: FontWeight.w400,
-                  color: Colors.red.shade900,
+                  color: Theme.of(context).primaryColor,
                   letterSpacing: 4,
                 ),
               ),

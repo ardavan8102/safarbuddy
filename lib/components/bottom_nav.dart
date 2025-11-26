@@ -47,10 +47,6 @@ class _CustomBottomNavBarState extends State<CustomBottomNavBar> {
             icon: Icon(CupertinoIcons.search),
             label: 'Search',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(CupertinoIcons.person),
-            label: 'Profile',
-          ),
         ],
       ),
     );

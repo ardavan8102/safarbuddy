@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:safar_buddy/components/bottom_nav.dart';
 import 'package:safar_buddy/ui/home.dart';
+import 'package:safar_buddy/ui/search.dart';
 import 'package:safar_buddy/ui/travel_page.dart';
 
 class PageHandler extends StatefulWidget {
@@ -17,8 +18,7 @@ class _PageHandlerState extends State<PageHandler> {
   final List<Widget> _pages = [
     HomePage(),
     TravelPage(),
-    Center(child: Text("Library", style: TextStyle(color: Colors.black))),
-    Center(child: Text("Profile", style: TextStyle(color: Colors.black))),
+    SearchPage(),
   ];
 
   void _onItemTapped(int index) {
