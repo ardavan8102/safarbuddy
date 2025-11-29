@@ -15,11 +15,17 @@ An Application for traveling and finding Travel Destinations.
 
 ## 📸 Ui Screenshots
 
->Destinations Page
-![Travel](https://github.com/ardavan8102/safarbuddy/blob/main/assets/screenshots/travel.jpg?raw=true)
-
->Search Page
-![Search](https://github.com/ardavan8102/safarbuddy/blob/main/assets/screenshots/search.jpg?raw=true)
+<details>
+  <summary>Tap To See</summary>
+  <ul>
+    <li>
+      <img src="https://github.com/ardavan8102/safarbuddy/blob/main/assets/screenshots/travel.jpg?raw=true" width="600" height="1000" />
+    </li>
+    <li>
+      <img src="https://github.com/ardavan8102/safarbuddy/blob/main/assets/screenshots/search.jpg?raw=true" width="600" height="1000" />
+    </li>
+  </ul>
+</details>
 
 
 ## 🔰 Know More Details
